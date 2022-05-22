@@ -179,3 +179,6 @@ table{
     margin-top:100px;
 
 }
+table th{
+    border:#000 1px solid;
+}
