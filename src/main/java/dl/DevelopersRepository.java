@@ -67,10 +67,6 @@ public class DevelopersRepository implements Repository<DevelopersDao> {
                 developersDao.setSex(resultSet.getString("sex"));
                 developersDao.setSalary(resultSet.getDouble("salary"));
                 developers.add(developersDao);
-//                System.out.println(resultSet.getInt("id") +
-//                        " " + resultSet.getString("name") +
-//                        " " + resultSet.getString("sex") +
-//                        " " + resultSet.getDouble("salary"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
