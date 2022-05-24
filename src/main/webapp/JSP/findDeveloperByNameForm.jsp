@@ -6,7 +6,7 @@
 
 <head>
     <title>Developers Page</title>
-    <c:import url="${path}header.jsp" />
+    <c:import url="${path}headers&footer/header.jsp" />
 </head>
 
 <body>
@@ -65,7 +65,7 @@
     </form> --%>
 
 
-<c:import url="${path}bodyFooter.jsp" />
+<c:import url="${path}headers&footer/bodyFooter.jsp" />
 </body>
 
 </html>

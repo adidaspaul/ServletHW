@@ -6,13 +6,13 @@
 
 <head>
     <title>Show All Devs</title>
-    <c:import url="${path}header.jsp" />
+    <c:import url="${path}headers&footer/header.jsp" />
 </head>
 
 <body>
 
     <header>
-            <c:import url="${path}devsHeader.jsp" />
+            <c:import url="${path}headers&footer/devsHeader.jsp" />
     </header>
 
     <table>
@@ -41,7 +41,7 @@
     </table>
 
 
-<c:import url="${path}bodyFooter.jsp" />
+<c:import url="${path}headers&footer/bodyFooter.jsp" />
 </body>
 
 </html>

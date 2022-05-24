@@ -6,16 +6,16 @@
 
         <head>
         <title>Management System</title>
-        <c:import url="${path}header.jsp" />
+        <c:import url="${path}headers&footer/header.jsp" />
         </head>
 
         <body>
 
-        <c:import url="${path}bodyHeader.jsp" />
+        <c:import url="${path}headers&footer/bodyHeader.jsp" />
 
 
 
-        <c:import url="${path}bodyFooter.jsp" />
+        <c:import url="${path}headers&footer/bodyFooter.jsp" />
         </body>
 
         </html>
