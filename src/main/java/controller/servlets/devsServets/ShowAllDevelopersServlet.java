@@ -1,4 +1,4 @@
-package controller.servlets;
+package controller.servlets.devsServets;
 
 import config.DataBaseManagerConnector;
 import config.HikariProvider;

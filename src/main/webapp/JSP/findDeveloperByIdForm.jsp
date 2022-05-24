@@ -12,26 +12,14 @@
 <body>
 
     <header>
-        <div class="container">
-            <img src="${path}/img/logo.png" alt="logo" class="logo">
-            <nav class="devstabs">
-                <ul>
-                    <li><a href="/homePage">Home</a></li>
-                    <li><a href="/findDeveloperByIdForm">Find Developer by Id</a></li>
-                    <li><a href="/findDeveloperByNameForm.html">Find Developer by Name</a></li>
-                    <li><a href="/addDeveloperForm">Add Developer to DB</a></li>
-                    <li><a href="/updateDeveloperForm">Update Developer Info</a></li>
-                    <li><a href="/removeDeveloperForm">Remove Developer from DB</a></li>
-                    <li><a href="/showAllDeveloperInfo">Show All Developers Info</a></li>
-                </ul>
-        </div>
+        <c:import url="${path}headers&footer/devsHeader.jsp" />
     </header>
 
-    <form action="/findDeveloperByName">
-        <label for="devsName">Developer Name</label>
-        <input class="input" type="text" name="devsName" id="developerName" placeholder="Enter Dev's Name" /><br>
+    < <form action="/findDeveloperById">
+        <label for="developerId">Developer ID</label>
+        <input class="input" type="number" name="devId" id="developerId" /><br>
         <input type="submit" value="Submit" />
-    </form>
+    </form> >
 
 
     <table>
@@ -48,11 +36,6 @@
             <td><c:out value="${devs.salary}"/></td>
         </tr>
     </table>
-    <%-- <form action="/findDeveloperById">
-        <label for="developerId">Developer ID</label>
-        <input type="text" name="developerId" id="developerId" /><br>
-        <input type="submit" value="Submit" />
-    </form> --%>
 
     <%-- <form action="/addDeveloper">
         <label for="developerName">Developer Name</label>

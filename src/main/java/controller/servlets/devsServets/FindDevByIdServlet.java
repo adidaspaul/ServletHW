@@ -1,16 +1,13 @@
-package controller.servlets;
+package controller.servlets.devsServets;
 
 import config.DataBaseManagerConnector;
 import config.HikariProvider;
 import config.PropertiesUtil;
 import dl.DevelopersRepository;
-import dl.Repository;
 import model.converter.DevelopersConverter;
-import model.dao.DevelopersDao;
 import model.dto.DevelopersDto;
 import service.DevelopersService;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -19,9 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(urlPatterns = "/findDeveloperByName")
+@WebServlet(urlPatterns = "/findDeveloperById")
+public class FindDevByIdServlet extends HttpServlet {
 
-public class FindDevByNameServlet extends HttpServlet {
     private DevelopersService service;
 
     @Override
@@ -34,14 +31,12 @@ public class FindDevByNameServlet extends HttpServlet {
     }
 
 
-@Override
+    @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    String devsName =   req.getParameter("devsName");
-    DevelopersDto dev = service.findByName(devsName);
-    req.setAttribute("devs", dev);
-    req.getRequestDispatcher("/JSP/findDeveloperByNameForm.jsp").forward(req, resp);
+        String devsId = req.getParameter("devId");
+        DevelopersDto dev = service.findById(Integer.parseInt(devsId));
+        req.setAttribute("devs", dev);
+        req.getRequestDispatcher("/JSP/findDeveloperByIdForm.jsp").forward(req, resp);
 
     }
-
-
 }

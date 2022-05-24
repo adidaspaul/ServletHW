@@ -6,7 +6,7 @@
                     <li><a class="sections" href="/home">Home</a></li>
                     <li class="dropdown"><a class="sections" href="/devsPage">Developers</a>
                         <div class="dropmenu">
-                            <a class="a" href="/findDeveloperById">Find Developer by Id</a>
+                            <a class="a" href="/findDeveloperByIdForm">Find Developer by Id</a>
                             <a class="a" href="/findDeveloperByNameForm">Find Developer by Name</a>
                             <a class="a" href="/addDeveloper">Add Developer to DB</a>
                             <a class="a" href="/updateDeveloper">Update Developer Info</a>

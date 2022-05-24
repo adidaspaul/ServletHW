@@ -1,4 +1,4 @@
-package controller.servlets;
+package controller.servlets.devsServets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(urlPatterns = "/findDevForm")
+@WebServlet(urlPatterns = "/findDeveloperByNameForm")
 public class FindDevByNameFormServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
