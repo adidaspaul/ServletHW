@@ -16,12 +16,11 @@
                     </li>
                     <li class="dropdown"><a class="sections" href="/">Skills</a>
                         <div class="dropmenu">
-                            <a class="a" href="/findSkillById">Find Skill by Id</a>
-                            <a class="a" href="/findSkillByNameForm">Find Skill by Name</a>
-                            <a class="a" href="/addSkill">Add Skill to DB</a>
-                            <a class="a" href="/updateSkill">Update Skill Info</a>
-                            <a class="a" href="/removeSkill">Remove Skill from DB</a>
-                            <a class="a" href="/showAllSkillInfo">Show All Skills Info</a>
+                            <a class="a" href="/findSkillByName">Find Skill by Name</a>
+                            <a class="a" href="/addSkill">Add a new Skill to DB</a>
+                            <a class="a" href="/updateSkill">Update a Skill</a>
+                            <a class="a" href="/removeSkill">Remove a Skill from DB</a>
+                            <a class="a" href="/showAllSkills">Show All Skills Info</a>
                         </div>
                     </li>
                     <li class="dropdown"><a class="sections" href="/">Projects</a>
@@ -31,7 +30,7 @@
                             <a class="a" href="/addProject">Add Project to DB</a>
                             <a class="a" href="/updateProject">Update Project Info</a>
                             <a class="a" href="/removeProject">Remove Project from DB</a>
-                            <a class="a" href="/showAllProjectInfo">Show All Projects Info</a>
+                            <a class="a" href="/showAllProjects">Show All Projects Info</a>
                         </div>
                     </li>
                     <li class="dropdown"><a class="sections" href="/">Companies</a>
@@ -41,7 +40,7 @@
                             <a class="a" href="/addCompany">Add Company to DB</a>
                             <a class="a" href="/updateCompany">Update Company Info</a>
                             <a class="a" href="/removeCompany">Remove Company from DB</a>
-                            <a class="a" href="/showAllCompanyInfo">Show All Companies Info</a>
+                            <a class="a" href="/showAllCompanies">Show All Companies Info</a>
                         </div>
                     </li>
                     <li class="dropdown"><a class="sections" href="/">Clients</a>
