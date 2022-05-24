@@ -13,7 +13,7 @@ public class FindDeveloperByIdFormServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        req.getRequestDispatcher("JSP/findDeveloperByIdForm.jsp").forward(req,resp);
+        req.getRequestDispatcher("/JSP/findDeveloperByIdForm.jsp").forward(req,resp);
     }
 
 }
