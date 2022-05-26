@@ -14,11 +14,9 @@
     <header>
             <c:import url="${path}headers&footer/devsHeader.jsp" />
     </header>
-
     <table>
       <thead>
         <tr>
-            <th>S/N</th>
             <th>Developer ID</th>
             <th>Developer Name</th>
             <th>Developer Sex</th>
@@ -26,16 +24,16 @@
         </tr>
       </thead>
       <tbody>
-      <c:set var="i" value="1"/>
       <c:forEach items="${list}" var="l">
         <tr>
-            <td>${i}</td>
             <td>${l.id}</td>
             <td>${l.name}</td>
             <td>${l.sex}</td>
             <td>${l.salary}</td>
         </tr>
-         <c:set var="i" value="${i + 1}"/>
+        <tr>
+        <td colspan="2"><button>Edit</button></td>
+        <td colspan="2"><button>Delete</button></td>
         </c:forEach>
       </tbody>
     </table>
