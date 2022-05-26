@@ -19,13 +19,13 @@
         <label for="developerName">Developer Name</label>
         <input class="input" type="text" name="devName" id="developerName" /><br>
         <label for="devSex">Developer Sex</label>
-        <input class="input" type="radio" name="devSex" id="male" />
-        <label for="male">Male</label>
-        <input class="input" type="radio" name="devSex" id="female" />
-        <label for="female">Female</label></br>
+        <input type="radio" name="devSex" id="male" value="male"/>
+        <label class="rad" for="male">Male</label>
+        <input  type="radio" name="devSex" id="female" value="female"/>
+        <label class="rad" for="female">Female</label></br>
         <label for="devSalary">Developer Salary</label>
         <input class="input" type="number" name="devSalary" id="developerSalary" /><br>
-        <input type="submit" value="Submit" />
+        <input class="sub" type="submit" value="Submit" />
     </form> >
 
 

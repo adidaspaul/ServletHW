@@ -14,7 +14,7 @@
     <header>
             <c:import url="${path}headers&footer/devsHeader.jsp" />
     </header>
-    <table>
+    <table class="alldevs">
       <thead>
         <tr>
             <th>Developer ID</th>
@@ -30,10 +30,9 @@
             <td>${l.name}</td>
             <td>${l.sex}</td>
             <td>${l.salary}</td>
+            <td><button>Edit</button></td>
+            <td><button>Delete</button></td>
         </tr>
-        <tr>
-        <td colspan="2"><button>Edit</button></td>
-        <td colspan="2"><button>Delete</button></td>
         </c:forEach>
       </tbody>
     </table>

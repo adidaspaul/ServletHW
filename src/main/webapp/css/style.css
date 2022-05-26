@@ -14,6 +14,7 @@
 
 body,
 html {
+    overflow:hidden;
     width: 100%;
     height: 100%;
     font-family: 'Roboto', 'Helvetica Neue', sans-serif;
@@ -42,7 +43,7 @@ header::after{
 .logo{
     width: 100px;
     float:left;
-    
+
 }
 
 nav{
@@ -59,7 +60,7 @@ nav li{
     display:inline-block;
     margin-left: 70px;
     padding-top:25px;
-    position:absolute;
+    position:relative;
 }
 
 nav a{
@@ -87,7 +88,7 @@ nav a:hover{
 
 .sections:hover::before{
     width:100%;
-    
+
 }
 .dropmenu{
 display: none;
@@ -119,10 +120,6 @@ z-index: 1;
     -webkit-position:absolute;
     -moz- position:absolute;
     -o- position:absolute;
-    float:right;
-    -webkit- float:right;
-    -moz- float:right;
-    -o- float:right;
     display: inline;
     -webkit- display: inline;
     -moz- display: inline;
@@ -136,6 +133,18 @@ label{
     background-color: rgba(30, 0, 183, 0.386);
     border-radius: 10px;
     margin-right: 20px;
+}
+.rad{
+    font-size: 15px;
+    color: rgb(255, 253, 253);
+    text-decoration: solid;
+    text-shadow: 2px 2px 2px black;
+    background-color: rgba(30, 0, 183, 0.386);
+    border-radius: 10px;
+    margin-left:-80px;
+}
+input[type=radio]{
+margin-left:-40px;
 }
 input{
     border-radius: 10px;
@@ -154,7 +163,7 @@ input{
     background-color: aquamarine;
     width: 40%;
 }
-input[type=submit] {
+input.sub[type=submit] {
   background-color: #04aa28c1;
   color: white;
   text-shadow: #000 0px 0px 10px;
@@ -165,7 +174,7 @@ input[type=submit] {
   margin: 10px 0 0 60px;
   padding:auto;
 }
-input[type=submit]:hover {
+input.sub[type=submit]:hover {
     background-color: #11ec1ce6;
 }
 form{
@@ -176,47 +185,46 @@ form{
 table{
     text-align: center;
     border-collapse: collapse;
-    width: 95%;
+    width: 70%;
     font-size: 20px;
     color: rgb(255, 253, 253);
     text-shadow: 2px 2px 2px black;
     background-color: rgba(98, 81, 191, 0.71);
     border-radius: 10px;
+    border-spacing:0;
     margin-left:auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 50px;
 }
-table th,
-table td,
-table tr,
-table thead,
-table tbody{
+table.alldevs th,
+table.alldevs td,
+table.alldevs tr,
+table.alldevs thead,
+table.alldevs tbody{
 display:block;
 }
-table thead tr {
+table.alldevs thead tr {
     width: 97%;
     width: -webkit-calc(100% - 16px);
     width:    -moz-calc(100% - 16px);
     width:         calc(100% - 16px);
 }
 
-table tr:after {
+table.alldevs tr:after {
     content: ' ';
     display: block;
     visibility: hidden;
     clear: both;
 }
-table tbody {
-    height: 100px;
+table.alldevs tbody {
+    height: 500px;
     overflow-y: auto;
     overflow-x: hidden;
 }
-table tbody td,
-table thead th {
-    width: 19%;
+table.alldevs tbody td,
+table.alldevs thead th {
+    width: 15%;
     float: left;
 
 }
-tbody td:last-child, thead th:last-child {
-    border-right: none !important;
-}
+

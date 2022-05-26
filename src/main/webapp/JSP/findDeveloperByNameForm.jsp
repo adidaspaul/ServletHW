@@ -18,7 +18,7 @@
     <form action="/findDeveloperByName">
         <label for="devsName">Developer Name</label>
         <input class="input" type="text" name="devsName" id="developerName" placeholder="Enter Dev's Name" /><br>
-        <input type="submit" value="Submit" />
+        <input class="sub" type="submit" value="Submit" />
     </form>
 
 
