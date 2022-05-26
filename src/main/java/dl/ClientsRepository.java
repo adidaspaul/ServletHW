@@ -55,17 +55,21 @@ public class ClientsRepository implements Repository<ClientsDao> {
     }
 
     @Override
-    public void save(ClientsDao entity) {
+    public Integer save(ClientsDao entity) {
         try (Connection connection = connector.getConnection();
              PreparedStatement statement = connection.prepareStatement(INSERT)) {
             statement.setString(1, entity.getName());
             statement.setString(2, entity.getCountry());
             statement.setString(3, entity.getCategory());
             statement.execute();
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if(generatedKeys.next()){
+                return generatedKeys.getInt(1);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        return null;
     }
 
     @Override

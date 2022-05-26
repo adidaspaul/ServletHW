@@ -41,16 +41,20 @@ public class SkillsRepository implements Repository<SkillsDao> {
 
 
     @Override
-    public void save(SkillsDao entity) {
+    public Integer save(SkillsDao entity) {
         try (Connection connection = connector.getConnection();
              PreparedStatement statement = connection.prepareStatement(INSERT)) {
             statement.setString(1, entity.getRank());
             statement.setString(2, entity.getSyntax());
             statement.execute();
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if(generatedKeys.next()){
+                return generatedKeys.getInt(1);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        return null;
     }
 
     @Override

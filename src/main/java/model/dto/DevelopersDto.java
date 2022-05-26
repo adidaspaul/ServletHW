@@ -16,7 +16,7 @@ public class DevelopersDto {
     public DevelopersDto() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

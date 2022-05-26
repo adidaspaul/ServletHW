@@ -3,10 +3,7 @@ package dl;
 import config.DataBaseManagerConnector;
 import model.dao.DevelopersDao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -75,17 +72,22 @@ public class DevelopersRepository implements Repository<DevelopersDao> {
     }
 
     @Override
-    public void save(DevelopersDao developers) {
+    public Integer save(DevelopersDao developer) {
 
         try (Connection connection = connector.getConnection();
-             PreparedStatement statement = connection.prepareStatement(INSERT)) {
-            statement.setString(1, developers.getName());
-            statement.setString(2, developers.getSex());
-            statement.setDouble(3, developers.getSalary());
+             PreparedStatement statement = connection.prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)) {
+            statement.setString(1, developer.getName());
+            statement.setString(2, developer.getSex());
+            statement.setDouble(3, developer.getSalary());
             statement.execute();
+            ResultSet generatedKey = statement.getGeneratedKeys();
+            if(generatedKey.next()){
+                return generatedKey.getInt(1);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     @Override

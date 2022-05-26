@@ -53,16 +53,21 @@ public class ProjectsRepository implements Repository<ProjectsDao> {
     }
 
     @Override
-    public void save(ProjectsDao entity) {
+    public Integer save(ProjectsDao entity) {
         try (Connection connection = connector.getConnection();
              PreparedStatement statement = connection.prepareStatement(INSERT)) {
             statement.setString(1, entity.getProjectName());
             statement.setDate(2, entity.getStartDate());
             statement.setDouble(3, entity.getCost());
             statement.execute();
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if(generatedKeys.next()){
+                return generatedKeys.getInt(1);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        return null;
     }
 
     @Override

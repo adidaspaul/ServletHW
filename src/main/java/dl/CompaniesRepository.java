@@ -52,16 +52,20 @@ public class CompaniesRepository implements Repository<CompaniesDao> {
     }
 
     @Override
-    public void save(CompaniesDao entity) {
+    public Integer save(CompaniesDao entity) {
         try (Connection connection = connector.getConnection();
              PreparedStatement statement = connection.prepareStatement(INSERT)) {
             statement.setString(1, entity.getCompanyName());
             statement.setString(2, entity.getCity());
             statement.execute();
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+            if(generatedKeys.next()){
+                return generatedKeys.getInt(1);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        return null;
     }
 
     @Override
