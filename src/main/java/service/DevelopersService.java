@@ -45,4 +45,8 @@ public class DevelopersService {
     public List<DevelopersDto> findAll() {
         return repository.selectAll().stream().map(converter::convert).collect(Collectors.toList());
     }
+
+    public void delete(Integer id){
+        repository.delete(id);
+    }
 }

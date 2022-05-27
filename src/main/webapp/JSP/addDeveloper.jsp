@@ -29,21 +29,6 @@
     </form> >
 
 
-    <table>
-        <tr>
-            <th>Developer ID</th>
-            <th>Developer Name</th>
-            <th>Developer Sex</th>
-            <th>Developer Salary</th>
-        </tr>
-        <tr>
-            <td><c:out value="${devs.id}"/></td>
-            <td><c:out value="${devs.name}"/></td>
-            <td><c:out value="${devs.sex}"/></td>
-            <td><c:out value="${devs.salary}"/></td>
-        </tr>
-    </table>
-
 <c:import url="${path}headers&footer/bodyFooter.jsp" />
 </body>
 
