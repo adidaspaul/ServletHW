@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
     <header>
             <c:import url="${path}headers&footer/devsHeader.jsp" />
     </header>
@@ -38,7 +37,7 @@
                           text-align:center;
                           text-decoration:none;
                           text-shadow:none;
-                          ;" href="updateDeveloperForm?id=${l.id}">Edit</a></td>
+                          ;" href="updateDevForm?id=${l.id}">Edit</a></td>
             <td><a style="
                                              background-color:white;
                                              color: black;
