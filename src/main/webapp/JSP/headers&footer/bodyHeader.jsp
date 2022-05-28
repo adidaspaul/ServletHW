@@ -9,7 +9,7 @@
                             <a class="a" href="/findDeveloperByIdForm">Find Developer by Id</a>
                             <a class="a" href="/findDeveloperByNameForm">Find Developer by Name</a>
                             <a class="a" href="/addDeveloperForm">Add Developer to DB</a>
-                            <a class="a" href="/updateDeveloper">Update Developer Info</a>
+                            <a class="a" href="/updateDeveloperForm">Update Developer Info</a>
                             <a class="a" href="/removeDeveloperForm">Remove Developer from DB</a>
                             <a class="a" href="/showAllDeveloperInfo">Show All Developers Info</a>
                         </div>

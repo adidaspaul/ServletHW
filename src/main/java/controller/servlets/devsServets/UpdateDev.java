@@ -5,6 +5,7 @@ import config.HikariProvider;
 import config.PropertiesUtil;
 import dl.DevelopersRepository;
 import model.converter.DevelopersConverter;
+import model.dto.DevelopersDto;
 import service.DevelopersService;
 
 import javax.servlet.ServletException;
@@ -14,8 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns="/removeDeveloper")
-public class DeleteDev extends HttpServlet {
+@WebServlet(urlPatterns = "/updateDev")
+public class UpdateDev extends HttpServlet {
 
     private DevelopersService service;
 
@@ -29,14 +30,18 @@ public class DeleteDev extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        this.doDelete(req, resp);
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doPut(req,resp);
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String devId = req.getParameter("id");
-        service.delete(Integer.parseInt(devId));
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Integer id = Integer.parseInt(req.getParameter("id"));
+        String devName = req.getParameter("devName");
+        String devSex = req.getParameter("devsSex");
+        Double devSalary = Double.parseDouble(req.getParameter("devSalary"));
+        DevelopersDto dev = new DevelopersDto(id, devName, devSex, devSalary);
+        service.update(dev);
         resp.sendRedirect("/showAllDeveloperInfo");
     }
 }

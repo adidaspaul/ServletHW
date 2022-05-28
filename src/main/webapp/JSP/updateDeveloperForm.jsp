@@ -1,22 +1,25 @@
      <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
         <c:set var="path" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <title>Developers Page</title>
-    <c:import url="${path}headers&footer/header.jsp" />
-</head>
+        <!DOCTYPE html>
+        <html lang="en">
 
-<body>
+        <head>
+            <title>Update Dev</title>
+            <c:import url="${path}headers&footer/header.jsp" />
+        </head>
 
-    <header>
-        <c:import url="${path}headers&footer/devsHeader.jsp" />
-    </header>
+        <body>
 
-     <form action="/addDeveloper" method="post">
-        <label for="developerName">Developer Name</label>
+            <header>
+                <c:import url="${path}headers&footer/devsHeader.jsp" />
+            </header>
+
+     <form action="/updateDev" method="post">
+        <label for="id">Developer Id</label>
+        <input class="input" type="number" name="id"/></br>
+        <label for="devName">Developer Name</label>
         <input class="input" type="text" name="devName" id="devName" /><br>
         <label for="devSex">Developer Sex</label>
         <input type="radio" name="devsSex" value="male"/>
@@ -27,9 +30,6 @@
         <input class="input" type="number" name="devSalary" id="developerSalary" /><br>
         <input class="sub" type="submit" value="Submit" />
     </form>
-
-
-<c:import url="${path}headers&footer/bodyFooter.jsp" />
-</body>
-
-</html>
+     <c:import url="${path}headers&footer/bodyFooter.jsp" />
+   </body>
+ </html>

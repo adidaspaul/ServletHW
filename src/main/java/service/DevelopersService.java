@@ -38,12 +38,15 @@ public class DevelopersService {
 
 
 
-    public void update(DevelopersDto developers) {
-        repository.update(converter.convert(developers));
+    public void update(DevelopersDto developer) {
+        repository.update(converter.convert(developer));
     }
 
     public List<DevelopersDto> findAll() {
-        return repository.selectAll().stream().map(converter::convert).collect(Collectors.toList());
+        return repository.selectAll()
+                .stream()
+                .map(converter::convert)
+                .collect(Collectors.toList());
     }
 
     public void delete(Integer id){

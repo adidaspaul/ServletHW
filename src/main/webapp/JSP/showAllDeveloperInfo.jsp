@@ -21,6 +21,7 @@
             <th>Developer Name</th>
             <th>Developer Sex</th>
             <th>Developer Salary</th>
+            <th colspan="2">Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -30,8 +31,22 @@
             <td>${l.name}</td>
             <td>${l.sex}</td>
             <td>${l.salary}</td>
-            <td><button>Edit</button></td>
-            <td><button>Delete</button></td>
+            <td><a style="
+                          background-color:white;
+                          color: black;
+                          padding:3px 5px;
+                          text-align:center;
+                          text-decoration:none;
+                          text-shadow:none;
+                          ;" href="updateDeveloperForm?id=${l.id}">Edit</a></td>
+            <td><a style="
+                                             background-color:white;
+                                             color: black;
+                                             padding:3px 5px;
+                                             text-align:center;
+                                             text-decoration:none;
+                                             text-shadow:none;
+                                             ;" href="removeDeveloper?devId=${l.id}">Delete</a></td>
         </tr>
         </c:forEach>
       </tbody>

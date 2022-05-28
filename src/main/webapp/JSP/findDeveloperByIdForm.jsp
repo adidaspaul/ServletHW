@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-    <title>Developers Page</title>
+    <title>Find Dev</title>
     <c:import url="${path}headers&footer/header.jsp" />
 </head>
 
@@ -36,17 +36,6 @@
             <td><c:out value="${devs.salary}"/></td>
         </tr>
     </table>
-
-    <%-- <form action="/addDeveloper">
-        <label for="developerName">Developer Name</label>
-        <input type="text" name="developerName" id="developerName" /><br>
-        <label for="developerAge">Age</label>
-        <input type="number" name="developerAge" id="developerAge" /><br>
-        <label for="developerSex">Sex</label>
-        <input type="radio" name="developerSex" id="developerSex" /><br>
-        <input type="submit" value="Submit" />
-    </form> --%>
-
 
 <c:import url="${path}headers&footer/bodyFooter.jsp" />
 </body>
