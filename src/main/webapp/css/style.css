@@ -161,7 +161,7 @@ input{
 }
 .input:focus {
     background-color: aquamarine;
-    width: 40%;
+    width: 20%;
 }
 input.sub[type=submit] {
   background-color: #04aa28c1;

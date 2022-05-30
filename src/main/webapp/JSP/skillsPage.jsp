@@ -30,7 +30,7 @@
             <td>${l.id}</td>
             <td>${l.syntax}</td>
             <td>${l.rank}</td>
-            <td><a href="updateDevForm?id=${l.id}">Edit</a></td>
+            <td><a href="updateSkillHiddenId?id=${l.id}">Edit</a></td>
             <td><a class="remove" href="removeSkill?id=${l.id}">Delete</a></td>
         </tr>
         </c:forEach>
