@@ -22,8 +22,6 @@ public class DevelopersService {
     public void save(DevelopersDto developer) {
         Integer devId = repository.save(converter.convert(developer));
         developer.setId(devId);
-
-//        repository.save(converter.convert(developers));
     }
 
     public DevelopersDto findById(Integer id) {

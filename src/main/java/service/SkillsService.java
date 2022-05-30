@@ -17,9 +17,10 @@ public class SkillsService {
         this.converter = converter;
     }
 
-    public void save(SkillsDto skills) {
+    public void save(SkillsDto skill) {
+        Integer skillId = repository.save(converter.convert(skill));
+        skill.setId(skillId);
 
-        repository.save(converter.convert(skills));
     }
 
     public SkillsDto findById(Integer id) {
