@@ -183,6 +183,49 @@ form{
     left: 40%;
 }
 
+.wrapper{
+    margin-top: 100px;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+.skills-table{
+    text-align: center;
+    border-collapse: collapse;
+    width: 50%;
+    font-size: 20px;
+    color: rgb(255, 253, 253);
+    text-shadow: 2px 2px 2px black;
+    background-color: rgba(98, 81, 191, 0.71);
+    border-radius: 10px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.skills-table th{
+    position:sticky;
+    top:-1px;
+    background-color: #2f42d2;
+    border-radius: 8px;
+}
+.skills-table tbody{
+    height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.skills-table a{
+    background-color:white;
+    color: black;
+    padding:3px 5px;
+    text-align:center;
+    text-decoration:none;
+    text-shadow:none;
+}
+.skills-table a:hover{
+    background-color: rgb(12, 183, 6);
+    color:white;
+}
+ .skills-table .remove:hover{
+    background-color:rgb(247, 76, 76);
+}
 table{
     text-align: center;
     border-collapse: collapse;

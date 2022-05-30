@@ -14,13 +14,12 @@
                             <a class="a" href="/showAllDeveloperInfo">Show All Developers Info</a>
                         </div>
                     </li>
-                    <li class="dropdown"><a class="sections" href="/">Skills</a>
+                    <li class="dropdown"><a class="sections" href="/skillsPage">Skills</a>
                         <div class="dropmenu">
-                            <a class="a" href="/findSkillByName">Find Skill by Name</a>
-                            <a class="a" href="/addSkill">Add a new Skill to DB</a>
-                            <a class="a" href="/updateSkill">Update a Skill</a>
-                            <a class="a" href="/removeSkill">Remove a Skill from DB</a>
-                            <a class="a" href="/showAllSkills">Show All Skills Info</a>
+                            <a class="a" href="/addSkillForm">Add a new Skill to DB</a>
+                            <a class="a" href="/updateSkillForm">Update a Skill</a>
+                            <a class="a" href="/removeSkillForm">Remove a Skill from DB</a>
+                            <a class="a" href="/skillsPage">Show All Skills Info</a>
                         </div>
                     </li>
                     <li class="dropdown"><a class="sections" href="/">Projects</a>

@@ -108,9 +108,6 @@ public class SkillsRepository implements Repository<SkillsDao> {
                 skillsDao.setRank(rs.getString("rank"));
                 skillsDao.setSyntax(rs.getString("syntax"));
                 skills.add(skillsDao);
-                //                System.out.println(rs.getInt("id") +
-//                        " " + rs.getString("rank") +
-//                        " " + rs.getString("syntax");
             }
         } catch (SQLException e) {
             e.printStackTrace();
