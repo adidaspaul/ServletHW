@@ -86,10 +86,10 @@ public class SkillsRepository implements Repository<SkillsDao> {
     }
 
     @Override
-    public void delete(Integer entity) {
+    public void delete(Integer id) {
         try (Connection connection = connector.getConnection();
              PreparedStatement statement = connection.prepareStatement(DELETE_SKILLS_BY_ID)) {
-            statement.setInt(1, entity);
+            statement.setInt(1, id);
             statement.execute();
         } catch (SQLException e) {
             e.printStackTrace();

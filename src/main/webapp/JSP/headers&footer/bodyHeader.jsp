@@ -16,7 +16,7 @@
                     </li>
                     <li class="dropdown"><a class="sections" href="/skillsPage">Skills</a>
                         <div class="dropmenu">
-                            <a class="a" href="/addSkillForm">Add a new Skill to DB</a>
+                            <a class="a" href="/addSkillForm">Add a Skill to DB</a>
                             <a class="a" href="/updateSkillForm">Update a Skill</a>
                             <a class="a" href="/removeSkillForm">Remove a Skill from DB</a>
                             <a class="a" href="/skillsPage">Show All Skills Info</a>

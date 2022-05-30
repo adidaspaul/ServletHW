@@ -36,5 +36,9 @@ public class SkillsService {
     public List<SkillsDto> findAll() {
         return repository.selectAll().stream().map(converter::convert).collect(Collectors.toList());
     }
+
+    public void delete(Integer id){
+        repository.delete(id);
+    }
 }
 
