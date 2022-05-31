@@ -22,14 +22,14 @@
                             <a class="a" href="/skillsPage">Show All Skills Info</a>
                         </div>
                     </li>
-                    <li class="dropdown"><a class="sections" href="/">Projects</a>
+                    <li class="dropdown"><a class="sections" href="/projectsPage">Projects</a>
                         <div class="dropmenu">
                             <a class="a" href="/findProjectById">Find Project by Id</a>
                             <a class="a" href="/findProjectByNameForm">Find Project by Name</a>
-                            <a class="a" href="/addProject">Add Project to DB</a>
+                            <a class="a" href="/addProjectForm">Add Project to DB</a>
                             <a class="a" href="/updateProject">Update Project Info</a>
                             <a class="a" href="/removeProject">Remove Project from DB</a>
-                            <a class="a" href="/showAllProjects">Show All Projects Info</a>
+                            <a class="a" href="/projectsPage">Show All Projects Info</a>
                         </div>
                     </li>
                     <li class="dropdown"><a class="sections" href="/">Companies</a>

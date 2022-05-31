@@ -17,9 +17,9 @@
 
      <form action="/addSkill" method="post">
         <label for="skillSyntax">Skill Syntax</label>
-        <input class="input" type="text" name="skillSyntax" /><br>
+        <input class="input" type="text" name="skillSyntax" required/><br>
         <label for="skillRank">Skill Rank</label>
-        <input type="text" name="skillRank"/></br>
+        <input type="text" name="skillRank" required/></br>
         <input class="sub" type="submit" value="Submit" />
     </form>
 

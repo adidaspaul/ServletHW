@@ -17,7 +17,7 @@
 
                                         <form action="/removeSkill" method="get">
                                            <label for="id">Skill ID</label>
-                                           <input class="input" type="number" name="id" id="skillId" /><br>
+                                           <input class="input" type="number" name="id" required /><br>
                                            <input class="sub" type="submit" value="Submit" />
                                        </form>
 

@@ -19,10 +19,10 @@
      <form action="/updateSkill" method="get">
         <input class="input" type="hidden" name="id" value="<%=request.getParameter("id") %>" />
         <label for="syntaxName">Syntax Name</label>
-        <input class="input" type="text" name="syntaxName"/><br>
+        <input class="input" type="text" name="syntaxName" required/><br>
         <label for="skillRank">Skill Rank</label>
-        <input class="input" type="text" name="skillRank"/><br>
-        <input class="sub" type="submit" value="Submit" />
+        <input class="input" type="text" name="skillRank" required/><br>
+        <input class="sub" type="submit" value="Submit"/>
     </form>
      <c:import url="${path}headers&footer/bodyFooter.jsp" />
    </body>

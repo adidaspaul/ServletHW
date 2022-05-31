@@ -18,16 +18,16 @@
 
      <form action="/updateDev" method="post">
         <label for="id">Developer Id</label>
-        <input class="input" type="number" name="id"/></br>
+        <input class="input" type="number" name="id" required/></br>
         <label for="devName">Developer Name</label>
-        <input class="input" type="text" name="devName" id="devName" /><br>
+        <input class="input" type="text" name="devName" required /><br>
         <label for="devSex">Developer Sex</label>
-        <input type="radio" name="devsSex" value="male"/>
+        <input type="radio" name="devsSex" value="male" required/>
         <label class="rad" for="devsSex">Male</label>
         <input  type="radio" name="devsSex" value="female"/>
         <label class="rad" for="female">Female</label></br>
         <label for="devSalary">Developer Salary</label>
-        <input class="input" type="number" name="devSalary" id="developerSalary" /><br>
+        <input class="input" type="number" name="devSalary" required /><br>
         <input class="sub" type="submit" value="Submit" />
     </form>
      <c:import url="${path}headers&footer/bodyFooter.jsp" />

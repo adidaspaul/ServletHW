@@ -16,8 +16,8 @@
     </header>
 
     < <form action="/findDeveloperById">
-        <label for="developerId">Developer ID</label>
-        <input class="input" type="number" name="devId" id="developerId" /><br>
+        <label for="devId">Developer ID</label>
+        <input class="input" type="number" name="devId" required /><br>
         <input class="sub" type="submit" value="Submit" />
     </form> >
 

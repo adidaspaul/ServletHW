@@ -19,7 +19,8 @@ public class ProjectsService {
     }
 
     public void save(ProjectsDto project) {
-        repository.save(converter.convert(project));
+        Integer projectId = repository.save(converter.convert(project));
+        project.setId(projectId);
     }
 
     public ProjectsDto findById(Integer id) {

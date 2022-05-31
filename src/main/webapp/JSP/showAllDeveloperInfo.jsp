@@ -45,7 +45,7 @@
                                              text-align:center;
                                              text-decoration:none;
                                              text-shadow:none;
-                                             ;" href="removeDeveloper?devId=${l.id}">Delete</a></td>
+                                             ;" href="removeDeveloper?id=${l.id}">Delete</a></td>
         </tr>
         </c:forEach>
       </tbody>
