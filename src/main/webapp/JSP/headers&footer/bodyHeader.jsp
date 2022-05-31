@@ -27,8 +27,8 @@
                             <a class="a" href="/findProjectById">Find Project by Id</a>
                             <a class="a" href="/findProjectByNameForm">Find Project by Name</a>
                             <a class="a" href="/addProjectForm">Add Project to DB</a>
-                            <a class="a" href="/updateProject">Update Project Info</a>
-                            <a class="a" href="/removeProject">Remove Project from DB</a>
+                            <a class="a" href="/updateProjectForm">Update Project Info</a>
+                            <a class="a" href="/removeProjectForm">Remove Project from DB</a>
                             <a class="a" href="/projectsPage">Show All Projects Info</a>
                         </div>
                     </li>
