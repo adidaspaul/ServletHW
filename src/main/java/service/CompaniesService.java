@@ -28,9 +28,12 @@ public class CompaniesService {
     }
 
 
-
     public void update(CompaniesDto company) {
         repository.update(converter.convert(company));
+    }
+
+    public void delete(Integer id) {
+        repository.delete(id);
     }
 
     public List<CompaniesDto> findAll() {

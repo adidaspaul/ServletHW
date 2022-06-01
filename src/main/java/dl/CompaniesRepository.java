@@ -14,7 +14,7 @@ import java.util.Optional;
 
 public class CompaniesRepository implements Repository<CompaniesDao> {
 
-    private final HikariProvider connector;
+    private final DataBaseManagerConnector connector;
 
     private static final String SELECT_ALL_COMPANIES = "SELECT * FROM companies";
     private static final String UPDATE_COMPANY = "UPDATE companies SET company_name = ?, city = ? WHERE id = ?";
@@ -23,7 +23,7 @@ public class CompaniesRepository implements Repository<CompaniesDao> {
     private static final String INSERT = "INSERT INTO companies (company_name, city) VALUES (?, ?)";
     private static final String INSERT_WITH_ID = "INSERT INTO companies (id, company_name, city) VALUES (?, ?, ?)";
 
-    public CompaniesRepository(HikariProvider connector) {
+    public CompaniesRepository(DataBaseManagerConnector connector) {
         this.connector = connector;
     }
 

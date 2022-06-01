@@ -10,7 +10,6 @@ public interface Repository<T> {
     Integer save(T entity);
     void saveWithId(T entity);
     int update(T entity);
-//    void deleteByObject(T entity);
     void delete(Integer id);
     List<T> selectAll();
 }
