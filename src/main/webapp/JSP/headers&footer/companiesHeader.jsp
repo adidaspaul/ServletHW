@@ -8,7 +8,7 @@
                                            <li class="sections"><a href="/addCompanyForm">Add a Company to DB</a></li>
                                            <li class="sections"><a href="/updateCompanyForm">Update a Company</a></li>
                                            <li class="sections"><a href="/removeCompanyForm">Remove a Company from DB</a></li>
-                                           <li class="sections"><a href="/showAllCompanies">Show All Companies</a></li>
+                                           <li class="sections"><a href="/companiesPage">Show All Companies</a></li>
                                        </ul>
                                    </nav>
                                </div>

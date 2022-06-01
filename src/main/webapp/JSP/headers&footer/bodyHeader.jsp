@@ -37,7 +37,7 @@
                             <a class="a" href="/findCompanyByIdForm">Find Company by Id</a>
                             <a class="a" href="/findCompanyByNameForm">Find Company by Name</a>
                             <a class="a" href="/addCompanyForm">Add Company to DB</a>
-                            <a class="a" href="/updateCompanyFOrm">Update Company Info</a>
+                            <a class="a" href="/updateCompanyForm">Update Company Info</a>
                             <a class="a" href="/removeCompanyForm">Remove Company from DB</a>
                             <a class="a" href="/companiesPage">Show All Companies Info</a>
                         </div>

@@ -21,7 +21,8 @@ public class CompaniesService {
     }
 
     public void save(CompaniesDto company) {
-        repository.save(converter.convert(company));
+        Integer companyId = repository.save(converter.convert(company));
+        company.setId(companyId);
     }
 
     public CompaniesDto findById(Integer id) {
