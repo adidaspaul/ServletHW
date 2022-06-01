@@ -15,11 +15,11 @@
         <c:import url="${path}headers&footer/devsHeader.jsp" />
     </header>
 
-    < <form action="/findDeveloperById">
+    <form action="/findDeveloperById">
         <label for="devId">Developer ID</label>
         <input class="input" type="number" name="devId" required /><br>
         <input class="sub" type="submit" value="Submit" />
-    </form> >
+    </form>
 
 
     <table>

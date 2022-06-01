@@ -24,7 +24,7 @@
                     </li>
                     <li class="dropdown"><a class="sections" href="/projectsPage">Projects</a>
                         <div class="dropmenu">
-                            <a class="a" href="/findProjectById">Find Project by Id</a>
+                            <a class="a" href="/findProjectByIdForm">Find Project by Id</a>
                             <a class="a" href="/findProjectByNameForm">Find Project by Name</a>
                             <a class="a" href="/addProjectForm">Add Project to DB</a>
                             <a class="a" href="/updateProjectForm">Update Project Info</a>
