@@ -1,5 +1,6 @@
 package service;
 
+import dl.ProjectsRepository;
 import dl.Repository;
 import model.converter.ProjectsConverter;
 import model.dao.ProjectsDao;
@@ -11,9 +12,9 @@ import java.util.stream.Collectors;
 public class ProjectsService {
 
     private final ProjectsConverter converter;
-    private final Repository<ProjectsDao> repository;
+    private final ProjectsRepository repository;
 
-    public ProjectsService(ProjectsConverter converter, Repository <ProjectsDao> repository) {
+    public ProjectsService(ProjectsConverter converter, ProjectsRepository repository) {
         this.repository = repository;
         this.converter = converter;
     }
@@ -25,6 +26,11 @@ public class ProjectsService {
 
     public ProjectsDto findById(Integer id) {
         return converter.convert(repository.findById(id));
+    }
+
+    public ProjectsDto findByName(String name) {
+        ProjectsDto project = converter.convert(repository.findByName(name));
+        return project;
     }
 
 

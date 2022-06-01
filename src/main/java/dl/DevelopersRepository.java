@@ -92,8 +92,6 @@ public class DevelopersRepository implements Repository<DevelopersDao> {
 
     @Override
     public void saveWithId(DevelopersDao developer) {
-//        findById(developer.getId());
-//        if(findById(developer.getId()) != null) throw new RuntimeException("Developer with id " + developer.getId() + " already exists");
         try (Connection connection = connector.getConnection();
              PreparedStatement statement = connection.prepareStatement(INSERT_WITH_ID)) {
             statement.setInt(1, developer.getId());

@@ -22,7 +22,7 @@ public class ProjectsRepository implements Repository<ProjectsDao> {
     private static final String FIND_BY_ID = "SELECT * FROM projects p WHERE p.id = ?";
     private static final String INSERT = "INSERT INTO projects (project_name, start_date, cost) VALUES (?, ?, ?)";
     private static final String INSERT_WITH_ID = "INSERT INTO projects (id, project_name, start_date, cost) VALUES (?, ?, ?, ?)";
-
+    private static final String FIND_BY_NAME = "SELECT id, project_name, start_date, cost FROM projects WHERE project_name = ?";
     public ProjectsRepository(DataBaseManagerConnector connector) {
         this.connector = connector;
     }
@@ -129,6 +129,18 @@ public class ProjectsRepository implements Repository<ProjectsDao> {
             e.printStackTrace();
         }
         return projects;
+    }
+
+    public ProjectsDao findByName(String name) {
+        try (Connection connection = connector.getConnection();
+             PreparedStatement statement = connection.prepareStatement(FIND_BY_NAME)) {
+            statement.setString(1, name);
+            ResultSet resultSet = statement.executeQuery();
+            return mapToProjectsDao(resultSet);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 
