@@ -1,5 +1,6 @@
 package service;
 
+import dl.CompaniesRepository;
 import dl.Repository;
 import model.converter.CompaniesConverter;
 import model.dao.CompaniesDao;
@@ -12,9 +13,9 @@ public class CompaniesService {
 
 
     private final CompaniesConverter converter;
-    private final Repository<CompaniesDao> repository;
+    private final CompaniesRepository repository;
 
-    public CompaniesService(CompaniesConverter converter, Repository <CompaniesDao> repository) {
+    public CompaniesService(CompaniesConverter converter, CompaniesRepository repository) {
         this.repository = repository;
         this.converter = converter;
     }
@@ -27,6 +28,9 @@ public class CompaniesService {
         return converter.convert(repository.findById(id));
     }
 
+    public CompaniesDto findByName(String name) {
+        return converter.convert(repository.findByName(name));
+    }
 
     public void update(CompaniesDto company) {
         repository.update(converter.convert(company));

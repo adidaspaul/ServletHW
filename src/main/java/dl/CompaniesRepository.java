@@ -22,6 +22,7 @@ public class CompaniesRepository implements Repository<CompaniesDao> {
     private static final String FIND_BY_ID = "SELECT * FROM companies c WHERE c.id = ?";
     private static final String INSERT = "INSERT INTO companies (company_name, city) VALUES (?, ?)";
     private static final String INSERT_WITH_ID = "INSERT INTO companies (id, company_name, city) VALUES (?, ?, ?)";
+    private static final String FIND_BY_NAME = "SELECT * FROM companies c WHERE c.company_name = ?";
 
     public CompaniesRepository(DataBaseManagerConnector connector) {
         this.connector = connector;
@@ -123,5 +124,17 @@ public class CompaniesRepository implements Repository<CompaniesDao> {
             e.printStackTrace();
         }
         return coDaoList;
+    }
+    public CompaniesDao findByName(String name) {
+        try (Connection connection = connector.getConnection();
+             PreparedStatement statement = connection.prepareStatement(FIND_BY_NAME)) {
+            statement.setString(1, name);
+            ResultSet resultSet = statement.executeQuery();
+            return mapToCompaniesDao(resultSet);
+        } catch (
+                SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
