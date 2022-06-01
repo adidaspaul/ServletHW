@@ -89,6 +89,7 @@ public class CompaniesRepository implements Repository<CompaniesDao> {
              PreparedStatement statement = connection.prepareStatement(UPDATE_COMPANY)) {
             statement.setString(1, entity.getCompanyName());
             statement.setString(2, entity.getCity());
+            statement.setInt(3, entity.getId());
             columnsUpdated = statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
