@@ -42,14 +42,14 @@
                             <a class="a" href="/companiesPage">Show All Companies Info</a>
                         </div>
                     </li>
-                    <li class="dropdown"><a class="sections" href="/">Clients</a>
+                    <li class="dropdown"><a class="sections" href="/clientsPage">Clients</a>
                         <div class="dropmenu">
-                            <a class="a" href="/findClientById">Find Client by Id</a>
+                            <a class="a" href="/findClientByIdForm">Find Client by Id</a>
                             <a class="a" href="/findClientByNameForm">Find Client by Name</a>
-                            <a class="a" href="/addClient">Add Client to DB</a>
-                            <a class="a" href="/updateClient">Update Client Info</a>
-                            <a class="a" href="/removeClient">Remove Client from DB</a>
-                            <a class="a" href="/showAllClientInfo">Show All Clients Info</a>
+                            <a class="a" href="/addClientForm">Add Client to DB</a>
+                            <a class="a" href="/updateClientForm">Update Client Info</a>
+                            <a class="a" href="/removeClientForm">Remove Client from DB</a>
+                            <a class="a" href="/clientsPage">Show All Clients Info</a>
                         </div>
                     </li>
                 </ul>
