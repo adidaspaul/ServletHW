@@ -5,33 +5,35 @@
 <html lang="en">
 
 <head>
-    <title>Find Company</title>
+    <title>Find Client</title>
     <c:import url="${path}headers&footer/header.jsp" />
 </head>
 
 <body>
 
     <header>
-        <c:import url="${path}headers&footer/companiesHeader.jsp" />
+        <c:import url="${path}headers&footer/clientsHeader.jsp" />
     </header>
 
-    <form action="/findCompanyById">
-        <label for="id">Company Id</label>
-        <input class="input" type="number" name="id" required placeholder="Enter Company's ID" /><br>
+    <form action="/findClientById">
+        <label for="id">Client ID</label>
+        <input class="input" type="number" name="id" required placeholder="Enter Client's ID" /><br>
         <input class="sub" type="submit" value="Submit" />
     </form>
 
 
     <table>
         <tr>
-            <th>Company ID</th>
-            <th>Company Name</th>
-            <th>Company City</th>
+            <th>Client ID</th>
+            <th>Client Name</th>
+            <th>Client Country</th>
+            <th>Client Category</th>
         </tr>
         <tr>
             <td><c:out value="${c.id}"/></td>
-            <td><c:out value="${c.companyName}"/></td>
-            <td><c:out value="${c.city}"/></td>
+            <td><c:out value="${c.name}"/></td>
+            <td><c:out value="${c.country}"/></td>
+            <td><c:out value="${c.category}"/></td>
         </tr>
     </table>
 
