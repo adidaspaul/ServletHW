@@ -1,5 +1,6 @@
 package service;
 
+import dl.ClientsRepository;
 import dl.Repository;
 import model.converter.ClientsConverter;
 import model.dao.ClientsDao;
@@ -11,9 +12,9 @@ import java.util.stream.Collectors;
 public class ClientsService {
 
     private final ClientsConverter converter;
-    private final Repository<ClientsDao> repository;
+    private final ClientsRepository repository;
 
-    public ClientsService(ClientsConverter converter, Repository <ClientsDao> repository) {
+    public ClientsService(ClientsConverter converter, ClientsRepository repository) {
         this.repository = repository;
         this.converter = converter;
     }
@@ -33,5 +34,9 @@ public class ClientsService {
 
     public List<ClientsDto> findAll() {
         return repository.selectAll().stream().map(converter::convert).collect(Collectors.toList());
+    }
+
+    public ClientsDto findByName(String name) {
+        return converter.convert(repository.findByName(name));
     }
 }
