@@ -20,7 +20,8 @@ public class ClientsService {
     }
 
     public void save(ClientsDto client) {
-        repository.save(converter.convert(client));
+        Integer clientId= repository.save(converter.convert(client));
+        client.setId(clientId);
     }
 
     public ClientsDto findById(Integer id) {
