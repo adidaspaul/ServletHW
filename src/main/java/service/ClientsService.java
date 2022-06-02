@@ -40,4 +40,8 @@ public class ClientsService {
     public ClientsDto findByName(String name) {
         return converter.convert(repository.findByName(name));
     }
+
+    public void delete(Integer id) {
+        repository.delete(id);
+    }
 }

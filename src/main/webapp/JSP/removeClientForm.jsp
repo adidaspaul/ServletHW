@@ -5,21 +5,21 @@
                 <html lang="en">
 
                         <head>
-                        <title>Delete Company</title>
+                        <title>Delete Client</title>
                         <c:import url="${path}headers&footer/header.jsp" />
                         </head>
 
                                 <body>
 
                                             <header>
-                                                    <c:import url="${path}headers&footer/companiesHeader.jsp" />
+                                                    <c:import url="${path}headers&footer/clientsHeader.jsp" />
                                             </header>
 
-                                        <form action="/removeCompany" method="get">
-                                           <label for="id">Company ID</label>
-                                           <input class="input" type="number" name="id"placeholder="Enter Client's ID" required /><br>
-                                           <input class="sub" type="submit" value="Submit" />
-                                       </form>
+                 <form action="/removeClient" method="get">
+                 <label for="id">Client ID</label>
+                  <input class="input" type="number" name="id" placeholder="Enter CLient's ID" required /><br>
+                  <input class="sub" type="submit" value="Submit" />
+                  </form>
 
 
 
