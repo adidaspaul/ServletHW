@@ -1,7 +1,6 @@
 package dl;
 
 import config.DataBaseManagerConnector;
-import config.HikariProvider;
 import model.dao.CompaniesDao;
 
 import java.sql.Connection;
@@ -10,7 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class CompaniesRepository implements Repository<CompaniesDao> {
 
@@ -78,7 +76,7 @@ public class CompaniesRepository implements Repository<CompaniesDao> {
             statement.setString(3, entity.getCity());
             statement.execute();
         } catch (SQLException e) {
-            System.out.println("!!!The ID already exists!!!");
+            e.printStackTrace();
         }
     }
 

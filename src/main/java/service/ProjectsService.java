@@ -1,9 +1,7 @@
 package service;
 
 import dl.ProjectsRepository;
-import dl.Repository;
 import model.converter.ProjectsConverter;
-import model.dao.ProjectsDao;
 import model.dto.ProjectsDto;
 
 import java.util.List;

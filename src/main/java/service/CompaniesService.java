@@ -1,9 +1,7 @@
 package service;
 
 import dl.CompaniesRepository;
-import dl.Repository;
 import model.converter.CompaniesConverter;
-import model.dao.CompaniesDao;
 import model.dto.CompaniesDto;
 
 import java.util.List;

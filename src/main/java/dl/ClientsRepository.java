@@ -10,7 +10,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ClientsRepository implements Repository<ClientsDao> {
 
@@ -83,7 +82,7 @@ public class ClientsRepository implements Repository<ClientsDao> {
             statement.setString(4, entity.getCategory());
             statement.execute();
         } catch (SQLException e) {
-            System.out.println("!!!The ID already exists!!!");
+            e.printStackTrace();
         }
     }
 

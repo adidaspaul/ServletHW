@@ -1,9 +1,7 @@
 package service;
 
 import dl.DevelopersRepository;
-import dl.Repository;
 import model.converter.DevelopersConverter;
-import model.dao.DevelopersDao;
 import model.dto.DevelopersDto;
 
 import java.util.List;

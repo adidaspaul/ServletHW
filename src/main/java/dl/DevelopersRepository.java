@@ -100,7 +100,7 @@ public class DevelopersRepository implements Repository<DevelopersDao> {
             statement.setDouble(4, developer.getSalary());
             statement.execute();
         } catch (SQLException e) {
-            System.out.println("!!!The ID already exists!!!");
+            e.printStackTrace();
         }
     }
 

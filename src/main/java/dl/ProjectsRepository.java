@@ -79,7 +79,7 @@ public class ProjectsRepository implements Repository<ProjectsDao> {
             statement.setDouble(3, entity.getCost());
             statement.execute();
         } catch (SQLException e) {
-            System.out.println("!!!The ID already exists!!!");
+            e.printStackTrace();
         }
 
     }
