@@ -25,6 +25,18 @@ values
         ('Junior', 'Java'),
         ('Middle','Java'),
         ('Senior','Java');
+        ('Junior', 'C++'),
+        ('Middle','C++'),
+        ('Senior','C++');
+        ('Junior', 'C#'),
+        ('Middle','C#'),
+        ('Senior','C#');
+        ('Junior', 'JS'),
+        ('Middle','JS'),
+        ('Senior','JS');
+        ('Junior', 'Python'),
+        ('Middle','Python'),
+        ('Senior','Python');
 
 insert into
     projects (project_name, start_date, cost)
@@ -33,6 +45,7 @@ values
     ('GroceryStore','2019-08-24', 200000.00),
     ('TouristAgency','2018-08-24', 375000.00),
     ('FurnitureStoreSystem','2020-08-24', 1000.0);
+    ('Family Budget App', '2020-08-24', 15000.0);
 
     insert into
         companies (company_name, city)
@@ -41,6 +54,7 @@ values
         ('Thunder Sofware', 'Los Angeles'),
         ('Soft Slab', 'New York'),
         ('Slick Devs', 'Kyiv');
+        ('Dash', 'Kyiv');
 
     insert into
         clients (name, country, category)
